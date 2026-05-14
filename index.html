@@ -38,24 +38,24 @@ body{font-family:system-ui,-apple-system,sans-serif;background:#0d0f14;color:#e2
 .li{display:flex;align-items:center;gap:5px;font-size:10px;color:#555a68}
 .lb{width:9px;height:9px;border-radius:2px}
 .gw{overflow-x:auto;background:#0d0f14;padding:4px 20px 12px}
-.gt{border-collapse:collapse;font-size:11px;white-space:nowrap;min-width:100%}
-.gt th{font-size:9px;color:#555a68;font-weight:400;padding:5px 0;text-align:center;border-bottom:1px solid rgba(255,255,255,.06)}
-.gt th.lh{text-align:left;padding-right:8px;color:#666b7a}
-.gt td{padding:2px 0;vertical-align:middle}
+.gtbl{border-collapse:collapse;font-size:11px;white-space:nowrap;min-width:100%}
+.gtbl th{font-size:9px;color:#555a68;font-weight:400;padding:5px 0;text-align:center;border-bottom:1px solid rgba(255,255,255,.06)}
+.gtbl th.lh{text-align:left;padding-right:8px;color:#666b7a}
+.gtbl td{padding:2px 0;vertical-align:middle}
 .glbl{padding-right:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:185px;color:#8b909e;font-size:10px;cursor:pointer}
 .glbl:hover{color:#e2e4ec}
 .gwho{padding-right:6px;font-size:9px;color:#555a68;white-space:nowrap}
-.gc{height:26px;border-right:1px solid rgba(255,255,255,.04);position:relative}
-.gc.tc{background:rgba(242,107,91,.04)}
-.gb{height:15px;border-radius:4px;position:absolute;top:5px;left:0;display:flex;align-items:center;padding:0 5px;font-size:9px;font-weight:500;cursor:pointer;transition:filter .12s;white-space:nowrap;overflow:hidden}
-.gb:hover{filter:brightness(1.2)}
-.gb.gp{background:rgba(124,110,247,.22);color:#a99fff;border:1px solid rgba(124,110,247,.38)}
-.gb.gT{background:rgba(45,212,164,.18);color:#2dd4a4;border:1px solid rgba(45,212,164,.33)}
-.gb.gB{background:rgba(91,156,246,.18);color:#7ab4f8;border:1px solid rgba(91,156,246,.33)}
-.gb.gA{background:rgba(244,185,66,.18);color:#f4b942;border:1px solid rgba(244,185,66,.33)}
-.gb.adj{border-style:dashed!important;opacity:.75}.gb.done{opacity:.28}.gb.hl{box-shadow:0 0 0 2px rgba(255,255,255,.18)}
+.gcell{height:26px;border-right:1px solid rgba(255,255,255,.04);position:relative}
+.gcell.tc{background:rgba(242,107,91,.04)}
+.gbar{height:15px;border-radius:4px;position:absolute;top:5px;left:0;display:flex;align-items:center;padding:0 5px;font-size:9px;font-weight:500;cursor:pointer;transition:filter .12s;white-space:nowrap;overflow:hidden}
+.gbar:hover{filter:brightness(1.2)}
+.gbar.gp{background:rgba(124,110,247,.22);color:#a99fff;border:1px solid rgba(124,110,247,.38)}
+.gbar.gT{background:rgba(45,212,164,.18);color:#2dd4a4;border:1px solid rgba(45,212,164,.33)}
+.gbar.gB{background:rgba(91,156,246,.18);color:#7ab4f8;border:1px solid rgba(91,156,246,.33)}
+.gbar.gA{background:rgba(244,185,66,.18);color:#f4b942;border:1px solid rgba(244,185,66,.33)}
+.gbar.adj{border-style:dashed!important;opacity:.75}.gbar.done{opacity:.28}.gbar.hl{box-shadow:0 0 0 2px rgba(255,255,255,.18)}
 .tvl{position:absolute;top:0;bottom:0;width:1px;background:#f26b5b;opacity:.65;pointer-events:none}
-.gr:hover td{background:rgba(255,255,255,.012)}.gr.hlr td{background:rgba(124,110,247,.05)!important}
+.grow:hover td{background:rgba(255,255,255,.012)}.grow.hlr td{background:rgba(124,110,247,.05)!important}
 .lanes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:rgba(255,255,255,.06);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
 .lane{background:#13161e}
 .lhdr{padding:9px 11px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,.06)}
@@ -64,44 +64,54 @@ body{font-family:system-ui,-apple-system,sans-serif;background:#0d0f14;color:#e2
 .avt{background:rgba(45,212,164,.1);color:#2dd4a4;border:1px solid rgba(45,212,164,.3)}
 .avb{background:rgba(91,156,246,.1);color:#5b9cf6;border:1px solid rgba(91,156,246,.3)}
 .ava{background:rgba(244,185,66,.1);color:#f4b942;border:1px solid rgba(244,185,66,.3)}
-.ln{font-size:11px;font-weight:600}.lr{font-size:9px;color:#555a68}
+.lname{font-size:11px;font-weight:600}.lrole{font-size:9px;color:#555a68}
 .cards{padding:7px;display:flex;flex-direction:column;gap:5px;min-height:140px}
 .card{border-radius:8px;border:1px solid rgba(255,255,255,.07);padding:9px 10px;background:#181b24;cursor:pointer;transition:.15s}
 .card:hover{border-color:rgba(255,255,255,.13);background:#1d2030}
 .card.hl{border-color:rgba(124,110,247,.4);background:rgba(124,110,247,.08)}
-.ch{display:flex;gap:5px;margin-bottom:4px}
+.cardh{display:flex;gap:5px;margin-bottom:4px}
 .dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:4px}
 .dbl{background:#5b9cf6}.dtl{background:#2dd4a4}.dal{background:#f4b942}.dgl{background:#555a68}
-.ct2{font-size:10px;font-weight:500;line-height:1.4}
-.card.hl .ct2{color:#c4b8ff}
-.strip{height:2px;border-radius:1px;margin-bottom:5px;opacity:.45}
-.stp{background:#7c6ef7}.stt{background:#2dd4a4}.stb{background:#5b9cf6}.sta{background:#f4b942}
-.cdts{display:flex;align-items:center;gap:3px;flex-wrap:wrap;margin-bottom:4px}
+.ctitle{font-size:10px;font-weight:500;line-height:1.4}
+.card.hl .ctitle{color:#c4b8ff}
+.cstrip{height:2px;border-radius:1px;margin-bottom:5px;opacity:.45}
+.csp{background:#7c6ef7}.cst{background:#2dd4a4}.csb{background:#5b9cf6}.csa{background:#f4b942}
+.cdates{display:flex;align-items:center;gap:3px;flex-wrap:wrap;margin-bottom:4px}
 .tag{font-size:9px;padding:2px 6px;border-radius:20px;font-weight:500}
 .tgp{background:rgba(124,110,247,.15);color:#a99fff}.tgt{background:rgba(45,212,164,.1);color:#2dd4a4}
 .tgb{background:rgba(91,156,246,.1);color:#7ab4f8}.tga{background:rgba(244,185,66,.1);color:#f4b942}
 .tgw{background:rgba(244,185,66,.1);color:#f4b942;border:1px dashed rgba(244,185,66,.3)}
-.an{font-size:9px;color:#555a68;font-style:italic;margin-top:2px}
+.adjn{font-size:9px;color:#555a68;font-style:italic;margin-top:2px}
 .cbtns{display:flex;gap:3px;flex-wrap:wrap;margin-top:6px}
 .cbtn{font-size:9px;padding:3px 7px;border:1px solid rgba(255,255,255,.1);border-radius:5px;background:transparent;cursor:pointer;color:#666b7a;font-family:inherit;display:inline-flex;align-items:center;gap:3px;transition:.12s}
-.cbtn:hover{background:#0d0f14;color:#e2e4ec}.cbtn.dn{border-color:rgba(45,212,164,.3);color:#2dd4a4;background:rgba(45,212,164,.08)}
+.cbtn:hover{background:#0d0f14;color:#e2e4ec}
+.cbtn.dn{border-color:rgba(45,212,164,.3);color:#2dd4a4;background:rgba(45,212,164,.08)}
+
+/* OBSERVAÇÕES */
 .obs-sec{padding:14px 20px;background:#13161e;border-top:1px solid rgba(255,255,255,.06)}
 .obs-sec h2{font-size:11px;font-weight:500;color:#8b909e;margin-bottom:10px}
 .obs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
 .oc{border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:11px;background:#181b24}
 .ow{display:flex;align-items:center;gap:6px;margin-bottom:7px;font-size:10px;color:#8b909e}
 .ow strong{color:#e2e4ec}
-.ol{display:flex;flex-direction:column;gap:3px;max-height:110px;overflow-y:auto;margin-bottom:7px}
-.oi{font-size:10px;padding:5px 8px;background:#1e2230;border-radius:5px;line-height:1.4}
-.oia{font-size:9px;font-weight:600;color:#555a68;margin-bottom:1px;display:flex;justify-content:space-between}
-.ots{font-size:8px;color:#555a68}
-.oe{font-size:10px;color:#555a68}
-.oadd{display:flex;gap:5px}
-.oadd input{flex:1;font-size:10px;padding:5px 8px;border:1px solid rgba(255,255,255,.1);border-radius:5px;background:#0d0f14;color:#e2e4ec;font-family:inherit;outline:none}
+.olist{display:flex;flex-direction:column;gap:4px;max-height:130px;overflow-y:auto;margin-bottom:7px}
+.oitem{font-size:10px;padding:6px 8px;background:#1e2230;border-radius:6px;line-height:1.4;position:relative;group:hover}
+.oitem:hover .odel{opacity:1}
+.ometa{display:flex;align-items:center;justify-content:space-between;margin-bottom:3px}
+.oname{font-size:9px;font-weight:600;color:#555a68}
+.otime{font-size:8px;color:#555a68}
+.omsg{color:#c8cad4;word-break:break-word}
+.odel{opacity:0;transition:opacity .15s;background:rgba(242,107,91,.15);border:1px solid rgba(242,107,91,.3);color:#f26b5b;border-radius:4px;padding:1px 6px;font-size:9px;cursor:pointer;font-family:inherit;line-height:1.6;flex-shrink:0}
+.odel:hover{background:rgba(242,107,91,.28)}
+.oempty{font-size:10px;color:#555a68;padding:4px 0}
+.oadd{display:flex;gap:5px;margin-top:2px}
+.oadd input{flex:1;font-size:10px;padding:6px 8px;border:1px solid rgba(255,255,255,.1);border-radius:5px;background:#0d0f14;color:#e2e4ec;font-family:inherit;outline:none;transition:border-color .15s}
 .oadd input:focus{border-color:#7c6ef7}
 .oadd input::placeholder{color:#555a68}
-.oadd button{font-size:10px;padding:5px 10px;border:1px solid rgba(255,255,255,.1);border-radius:5px;background:transparent;cursor:pointer;color:#8b909e;font-family:inherit;transition:.12s}
+.oadd input:disabled{opacity:.5}
+.oadd button{font-size:18px;line-height:1;padding:4px 10px;border:1px solid rgba(255,255,255,.1);border-radius:5px;background:transparent;cursor:pointer;color:#8b909e;font-family:inherit;transition:.12s}
 .oadd button:hover{background:#1e2230;color:#e2e4ec}
+
 .modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:200;align-items:center;justify-content:center;padding:20px}
 .modal-bg.open{display:flex}
 .modal{background:#13161e;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:20px;width:100%;max-width:340px}
@@ -116,6 +126,7 @@ body{font-family:system-ui,-apple-system,sans-serif;background:#0d0f14;color:#e2
 .mbtns button{font-size:11px;padding:6px 14px;border-radius:7px;border:1px solid rgba(255,255,255,.1);background:transparent;cursor:pointer;color:#8b909e;font-family:inherit;transition:.12s}
 .mbtns button:hover{background:#1e2230}
 .mbtns .ok{background:#7c6ef7;border-color:#7c6ef7;color:#fff;font-weight:500}.mbtns .ok:hover{opacity:.88}
+
 .toast{position:fixed;bottom:18px;right:18px;background:#13161e;border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:9px 14px;font-size:11px;z-index:300;display:flex;align-items:center;gap:7px;transition:opacity .3s;pointer-events:none;max-width:300px}
 .toast.hide{opacity:0}
 .footer{padding:12px 20px;border-top:1px solid rgba(255,255,255,.06);display:flex;align-items:center;justify-content:space-between;background:#13161e;gap:8px;flex-wrap:wrap}
@@ -167,14 +178,14 @@ body{font-family:system-ui,-apple-system,sans-serif;background:#0d0f14;color:#e2
 
 <div class="sec-hdr"><div class="sec-l">🗂 Cards por responsável</div></div>
 <div class="lanes">
-  <div class="lane"><div class="lhdr"><div class="av avp">V</div><div><div class="ln">Vivian</div><div class="lr">Indicadores</div></div></div><div class="cards" id="lv"></div></div>
-  <div class="lane"><div class="lhdr"><div class="av avt">G</div><div><div class="ln">Guilherme</div><div class="lr">Líder de TRL</div></div></div><div class="cards" id="lg"></div></div>
-  <div class="lane"><div class="lhdr"><div class="av avb">V</div><div><div class="ln">Vitor</div><div class="lr">Ficha de Projetos</div></div></div><div class="cards" id="lvi"></div></div>
-  <div class="lane"><div class="lhdr"><div class="av ava">R</div><div><div class="ln">Rodrigo</div><div class="lr">Líder de Dados</div></div></div><div class="cards" id="lr2"></div></div>
+  <div class="lane"><div class="lhdr"><div class="av avp">V</div><div><div class="lname">Vivian</div><div class="lrole">Indicadores</div></div></div><div class="cards" id="lv"></div></div>
+  <div class="lane"><div class="lhdr"><div class="av avt">G</div><div><div class="lname">Guilherme</div><div class="lrole">Líder de TRL</div></div></div><div class="cards" id="lg"></div></div>
+  <div class="lane"><div class="lhdr"><div class="av avb">V</div><div><div class="lname">Vitor</div><div class="lrole">Ficha de Projetos</div></div></div><div class="cards" id="lvi"></div></div>
+  <div class="lane"><div class="lhdr"><div class="av ava">R</div><div><div class="lname">Rodrigo</div><div class="lrole">Líder de Dados</div></div></div><div class="cards" id="lr2"></div></div>
 </div>
 
 <div class="obs-sec">
-  <h2>💬 Observações — visível e editável por todos em tempo real</h2>
+  <h2>💬 Observações — visível e editável por todos · passe o mouse sobre um comentário para excluir</h2>
   <div class="obs-grid" id="obs-grid"></div>
 </div>
 
@@ -220,9 +231,9 @@ const TASKS = [
   {id:'r2', lane:'rodrigo',   title:'Validação Resultados — Dash PMO',           s:[5,20],e:[5,28],color:'A'},
   {id:'r3', lane:'rodrigo',   title:'Modelo Inicial parametrizado do OnePage',   s:[5,25],e:[6,3], color:'A'},
 ];
-const NAMES = {vivian:'Vivian',guilherme:'Guilherme',vitor:'Vitor',rodrigo:'Rodrigo'};
+const NAMES   = {vivian:'Vivian',guilherme:'Guilherme',vitor:'Vitor',rodrigo:'Rodrigo'};
 const LANE_EL = {lv:'vivian',lg:'guilherme',lvi:'vitor',lr2:'rodrigo'};
-const AVC = {vivian:'avp',guilherme:'avt',vitor:'avb',rodrigo:'ava'};
+const AVC     = {vivian:'avp',guilherme:'avt',vitor:'avb',rodrigo:'ava'};
 
 let tStatus={}, tAdjs={}, obsData={vivian:[],guilherme:[],vitor:[],rodrigo:[]};
 let hlId=null, editId=null, ttimer=null;
@@ -251,7 +262,7 @@ function getStatus(t){
   return st;
 }
 
-// ── CARREGAR TUDO DO SUPABASE ──
+// ── CARREGAR DADOS ──
 async function loadAll(){
   try{
     const [{data:tasks},{data:adjs},{data:obs}] = await Promise.all([
@@ -259,22 +270,17 @@ async function loadAll(){
       sb.from('pmo_adjustments').select('*'),
       sb.from('pmo_observations').select('*').order('created_at',{ascending:true})
     ]);
-    tStatus={};
-    (tasks||[]).forEach(r=>tStatus[r.id]=r.status);
-    tAdjs={};
-    (adjs||[]).forEach(r=>tAdjs[r.task_id]=r);
+    tStatus={};(tasks||[]).forEach(r=>tStatus[r.id]=r.status);
+    tAdjs={};(adjs||[]).forEach(r=>tAdjs[r.task_id]=r);
     obsData={vivian:[],guilherme:[],vitor:[],rodrigo:[]};
     (obs||[]).forEach(r=>{if(obsData[r.lane])obsData[r.lane].push(r)});
     setSY('ok','sincronizado');
     renderAll();
-  }catch(e){
-    setSY('err','erro — verifique conexão');
-    console.error(e);
-  }
+  }catch(e){setSY('err','erro de conexão');console.error(e)}
 }
 
-// ── POLLING a cada 10s ──
-setInterval(loadAll, 10000);
+// Polling a cada 10s para capturar mudanças de outros usuários
+setInterval(loadAll,10000);
 
 // ── GANTT ──
 function renderGantt(){
@@ -288,7 +294,7 @@ function renderGantt(){
     const{s,e,adj}=getDates(t);
     const so=off(s),eo=off(e),span=Math.max(1,eo-so+1);
     const isDone=tStatus[t.id]==='done',isHl=hlId===t.id;
-    const cls=`gb g${t.color}${adj?' adj':''}${isDone?' done':''}${isHl?' hl':''}`;
+    const cls=`gbar g${t.color}${adj?' adj':''}${isDone?' done':''}${isHl?' hl':''}`;
     const short=t.title.length>20?t.title.slice(0,18)+'…':t.title;
     const cells=allDays.map((d,i)=>{
       const isT=d.toDateString()===now.toDateString();
@@ -297,11 +303,11 @@ function renderGantt(){
         inn+=`<div class="${cls}" style="width:${span*C}px" onclick="hl('${t.id}')" title="${t.title}">${span>4?short:''}</div>`;
         if(ti>=so&&ti<=eo)inn+=`<div class="tvl" style="left:${(ti-so)*C}px"></div>`;
       }
-      return`<td class="gc${isT?' tc':''}" style="min-width:${C}px;width:${C}px;position:relative">${inn}</td>`;
+      return`<td class="gcell${isT?' tc':''}" style="min-width:${C}px;width:${C}px;position:relative">${inn}</td>`;
     }).join('');
-    return`<tr class="gr${isHl?' hlr':''}"><td class="glbl" style="min-width:${L}px;width:${L}px" onclick="hl('${t.id}')" title="${t.title}">${t.title}</td><td class="gwho" style="min-width:${W}px;width:${W}px">${NAMES[t.lane]}</td>${cells}</tr>`;
+    return`<tr class="grow${isHl?' hlr':''}"><td class="glbl" style="min-width:${L}px;width:${L}px" onclick="hl('${t.id}')" title="${t.title}">${t.title}</td><td class="gwho" style="min-width:${W}px;width:${W}px">${NAMES[t.lane]}</td>${cells}</tr>`;
   }).join('');
-  document.getElementById('gantt').innerHTML=`<table class="gt" style="table-layout:fixed"><colgroup><col style="width:${L}px"><col style="width:${W}px">${allDays.map(()=>`<col style="width:${C}px">`).join('')}</colgroup><thead><tr><th class="lh">Entrega</th><th class="lh">Resp.</th>${hd}</tr></thead><tbody>${rows}</tbody></table>`;
+  document.getElementById('gantt').innerHTML=`<table class="gtbl" style="table-layout:fixed"><colgroup><col style="width:${L}px"><col style="width:${W}px">${allDays.map(()=>`<col style="width:${C}px">`).join('')}</colgroup><thead><tr><th class="lh">Entrega</th><th class="lh">Resp.</th>${hd}</tr></thead><tbody>${rows}</tbody></table>`;
 }
 
 // ── CARDS ──
@@ -313,14 +319,14 @@ function renderCards(){
       const st=getStatus(t);
       const dc=st==='done'?'dtl':st==='adj'?'dal':st==='active'?'dbl':'dgl';
       const a=tAdjs[t.id];
-      const note=a&&a.reason?`<div class="an">↳ ${a.reason}</div>`:'';
+      const note=a&&a.reason?`<div class="adjn">↳ ${a.reason}</div>`:'';
       const c=t.color.toLowerCase();
       const tg={p:'tgp',t:'tgt',b:'tgb',a:'tga'}[c];
-      const sp={p:'stp',t:'stt',b:'stb',a:'sta'}[c];
+      const sp={p:'csp',t:'cst',b:'csb',a:'csa'}[c];
       return`<div class="card${isHl?' hl':''}" id="cd-${t.id}" onclick="hl('${t.id}')">
-        <div class="ch"><span class="dot ${dc}"></span><div class="ct2">${t.title}</div></div>
-        <div class="strip ${sp}"></div>
-        <div class="cdts">
+        <div class="cardh"><span class="dot ${dc}"></span><div class="ctitle">${t.title}</div></div>
+        <div class="cstrip ${sp}"></div>
+        <div class="cdates">
           ${isR?`<span class="tag ${tg}">${disp(s)}</span><span style="font-size:9px;color:#555a68">→</span>`:''}
           <span class="tag ${tg}">${disp(e)}</span>
           ${adj?`<span class="tag tgw">ajustado</span>`:''}
@@ -335,13 +341,23 @@ function renderCards(){
   });
 }
 
-// ── OBS ──
+// ── OBSERVAÇÕES ──
 function renderObs(){
   document.getElementById('obs-grid').innerHTML=Object.keys(obsData).map(k=>{
-    const entries=obsData[k].map(e=>`<div class="oi"><div class="oia"><span>${NAMES[k]}</span><span class="ots">${fmtTs(e.created_at)}</span></div>${e.message}</div>`).join('');
+    const entries=obsData[k].map(e=>`
+      <div class="oitem" id="obs-${e.id}">
+        <div class="ometa">
+          <span class="oname">${NAMES[k]}</span>
+          <div style="display:flex;align-items:center;gap:6px">
+            <span class="otime">${fmtTs(e.created_at)}</span>
+            <button class="odel" onclick="deleteObs(${e.id},'${k}')" title="Excluir comentário">✕</button>
+          </div>
+        </div>
+        <div class="omsg">${e.message}</div>
+      </div>`).join('');
     return`<div class="oc">
       <div class="ow"><div class="av ${AVC[k]}" style="width:22px;height:22px;font-size:9px;flex-shrink:0">${NAMES[k][0]}</div><strong>${NAMES[k]}</strong></div>
-      <div class="ol" id="ol-${k}">${entries||'<div class="oe">Sem observações.</div>'}</div>
+      <div class="olist" id="ol-${k}">${entries||'<div class="oempty">Sem observações.</div>'}</div>
       <div class="oadd">
         <input id="oi-${k}" type="text" placeholder="Adicionar observação..." onkeydown="if(event.key==='Enter')addObs('${k}')">
         <button onclick="addObs('${k}')">+</button>
@@ -362,40 +378,49 @@ function renderStats(){
 
 function renderAll(){renderStats();renderGantt();renderCards();renderObs()}
 
-// ── AÇÕES ──
+// ── ADICIONAR OBSERVAÇÃO ──
 async function addObs(k){
   const inp=document.getElementById('oi-'+k);
   const v=inp.value.trim();
   if(!v)return;
-
-  // 1. Limpar input imediatamente
   inp.value='';
   inp.disabled=true;
 
-  // 2. Gravar no Supabase
-  const{data,error}=await sb.from('pmo_observations')
-    .insert({lane:k,message:v})
-    .select()
-    .single();
-
+  const{data,error}=await sb.from('pmo_observations').insert({lane:k,message:v}).select().single();
   inp.disabled=false;
 
-  if(error){
-    toast('Erro ao salvar. Tente novamente.');
-    inp.value=v; // restaurar texto
-    return;
-  }
+  if(error){toast('Erro ao salvar. Tente novamente.');inp.value=v;return;}
 
-  // 3. Adicionar localmente e renderizar sem esperar o polling
+  // Adiciona localmente imediatamente sem esperar o polling
   obsData[k].push(data);
   renderObs();
-  toast('Observação salva e visível para todos!');
-
-  // 4. Rolar para o fim da lista
+  toast('Observação salva!');
   const ol=document.getElementById('ol-'+k);
   if(ol)ol.scrollTop=ol.scrollHeight;
 }
 
+// ── EXCLUIR OBSERVAÇÃO ──
+async function deleteObs(id, lane){
+  if(!confirm('Excluir este comentário?'))return;
+
+  const el=document.getElementById('obs-'+id);
+  if(el){el.style.opacity='.4';el.style.pointerEvents='none';}
+
+  const{error}=await sb.from('pmo_observations').delete().eq('id',id);
+
+  if(error){
+    toast('Erro ao excluir.');
+    if(el){el.style.opacity='1';el.style.pointerEvents='';}
+    return;
+  }
+
+  // Remove localmente imediatamente
+  obsData[lane]=obsData[lane].filter(o=>o.id!==id);
+  renderObs();
+  toast('Comentário excluído.');
+}
+
+// ── DEMAIS AÇÕES ──
 function hl(id){
   hlId=hlId===id?null:id;renderGantt();renderCards();
   if(hlId){const el=document.getElementById('cd-'+id);if(el)el.scrollIntoView({behavior:'smooth',block:'center'});}
@@ -427,20 +452,17 @@ async function saveAdj(){
         await sb.from('pmo_tasks').update({status:'active',updated_at:new Date().toISOString()}).eq('id',editId);
         tStatus[editId]='active';
       }
-      toast('Prazo ajustado! Visível para todos.');
-      renderAll();
+      toast('Prazo ajustado! Visível para todos.');renderAll();
     }else{toast('Erro ao salvar ajuste.');}
   }
   closeModal();
 }
 
 async function toggleDone(id){
-  const cur=tStatus[id]||'pending';
-  const novo=cur==='done'?'active':'done';
+  const novo=tStatus[id]==='done'?'active':'done';
   const{error}=await sb.from('pmo_tasks').update({status:novo,updated_at:new Date().toISOString()}).eq('id',id);
   if(error){toast('Erro ao atualizar.');return;}
-  tStatus[id]=novo;
-  renderAll();
+  tStatus[id]=novo;renderAll();
   toast(novo==='done'?'Marcado como concluído!':'Tarefa reaberta.');
 }
 
@@ -457,7 +479,7 @@ function exportCSV(){
 
 function copyLink(){
   navigator.clipboard.writeText(window.location.href)
-    .then(()=>toast('Link copiado! Compartilhe com a equipe.'))
+    .then(()=>toast('Link copiado!'))
     .catch(()=>prompt('Link:',window.location.href));
 }
 
