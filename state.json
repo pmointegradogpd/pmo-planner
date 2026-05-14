@@ -1,0 +1,20 @@
+{
+  "tasks": [
+    {"id":"v1","lane":"vivian","title":"Consolidar dados dos Indicadores","s":[5,12],"e":[5,15],"color":"p","status":"active"},
+    {"id":"v2","lane":"vivian","title":"Entrega do Modelo do Relatório do OnePage","s":[5,15],"e":[5,19],"color":"p","status":"active"},
+    {"id":"v3","lane":"vivian","title":"Finalização do OnePage","s":[5,26],"e":[5,26],"color":"p","status":"pending"},
+    {"id":"g1","lane":"guilherme","title":"Tabular as TRLs","s":[5,12],"e":[5,14],"color":"T","status":"active"},
+    {"id":"g2","lane":"guilherme","title":"Verificar diagnósticos do modelo","s":[5,14],"e":[5,18],"color":"T","status":"active"},
+    {"id":"g3","lane":"guilherme","title":"Geração dos Resultados","s":[5,19],"e":[5,20],"color":"T","status":"pending"},
+    {"id":"g4","lane":"guilherme","title":"Finalização OnePage IMAT","s":[5,29],"e":[5,29],"color":"T","status":"pending"},
+    {"id":"vi1","lane":"vitor","title":"Validação Estrutura da Ficha de Projetos","s":[5,12],"e":[5,18],"color":"B","status":"active"},
+    {"id":"vi2","lane":"vitor","title":"Input das informações","s":[5,18],"e":[5,22],"color":"B","status":"pending"},
+    {"id":"vi3","lane":"vitor","title":"Apresentação OnePage Finalizado","s":[6,3],"e":[6,3],"color":"B","status":"pending"},
+    {"id":"r1","lane":"rodrigo","title":"Análise e Parametrização — Dash PMO","s":[5,19],"e":[5,25],"color":"A","status":"pending"},
+    {"id":"r2","lane":"rodrigo","title":"Validação Resultados — Dash PMO","s":[5,20],"e":[5,28],"color":"A","status":"pending"},
+    {"id":"r3","lane":"rodrigo","title":"Modelo Inicial parametrizado do OnePage","s":[5,25],"e":[6,3],"color":"A","status":"pending"}
+  ],
+  "adjs": {},
+  "obs": {"vivian":[],"guilherme":[],"vitor":[],"rodrigo":[]},
+  "updatedAt": "2025-05-14T00:00:00Z"
+}
