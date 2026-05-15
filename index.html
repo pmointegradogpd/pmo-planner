@@ -95,14 +95,13 @@ body{font-family:system-ui,-apple-system,sans-serif;background:#0d0f14;color:#e2
 .ow{display:flex;align-items:center;gap:6px;margin-bottom:7px;font-size:10px;color:#8b909e}
 .ow strong{color:#e2e4ec}
 .olist{display:flex;flex-direction:column;gap:4px;max-height:130px;overflow-y:auto;margin-bottom:7px}
-.oitem{font-size:10px;padding:6px 8px;background:#1e2230;border-radius:6px;line-height:1.4;position:relative;group:hover}
-.oitem:hover .odel{opacity:1}
-.ometa{display:flex;align-items:center;justify-content:space-between;margin-bottom:3px}
+.oitem{font-size:10px;padding:6px 8px;background:#1e2230;border-radius:6px;line-height:1.4;position:relative}
+.ometa{display:flex;align-items:center;justify-content:space-between;margin-bottom:3px;gap:6px}
 .oname{font-size:9px;font-weight:600;color:#555a68}
-.otime{font-size:8px;color:#555a68}
+.otime{font-size:8px;color:#555a68;white-space:nowrap}
 .omsg{color:#c8cad4;word-break:break-word}
-.odel{opacity:0;transition:opacity .15s;background:rgba(242,107,91,.15);border:1px solid rgba(242,107,91,.3);color:#f26b5b;border-radius:4px;padding:1px 6px;font-size:9px;cursor:pointer;font-family:inherit;line-height:1.6;flex-shrink:0}
-.odel:hover{background:rgba(242,107,91,.28)}
+.odel{background:transparent;border:1px solid rgba(242,107,91,.25);color:rgba(242,107,91,.55);border-radius:4px;padding:1px 6px;font-size:9px;cursor:pointer;font-family:inherit;line-height:1.6;flex-shrink:0;transition:.15s}
+.odel:hover{background:rgba(242,107,91,.2);border-color:#f26b5b;color:#f26b5b}
 .oempty{font-size:10px;color:#555a68;padding:4px 0}
 .oadd{display:flex;gap:5px;margin-top:2px}
 .oadd input{flex:1;font-size:10px;padding:6px 8px;border:1px solid rgba(255,255,255,.1);border-radius:5px;background:#0d0f14;color:#e2e4ec;font-family:inherit;outline:none;transition:border-color .15s}
