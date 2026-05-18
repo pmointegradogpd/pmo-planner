@@ -15,10 +15,11 @@ body{font-family:system-ui,-apple-system,sans-serif;background:#0d0f14;color:#e2
 .logo-text{font-size:13px;font-weight:600}
 .logo-sub{font-size:9px;color:#555a68;margin-top:-2px}
 .topbar-right{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:5px;padding:5px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.1);background:transparent;color:#8b909e;font-size:11px;font-family:inherit;cursor:pointer;transition:.15s}
+.btn{display:inline-flex;align-items:center;gap:5px;padding:5px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.1);background:transparent;color:#8b909e;font-size:11px;font-family:inherit;cursor:pointer;transition:.15s;white-space:nowrap}
 .btn:hover{background:#1e2230;color:#e2e4ec}
 .btn-teal{border-color:rgba(45,212,164,.3);color:#2dd4a4;background:rgba(45,212,164,.08)}.btn-teal:hover{background:rgba(45,212,164,.15)}
 .btn-purple{border-color:rgba(124,110,247,.3);color:#7c6ef7;background:rgba(124,110,247,.08)}.btn-purple:hover{background:rgba(124,110,247,.15)}
+.btn-green{border-color:rgba(74,222,128,.3);color:#4ade80;background:rgba(74,222,128,.08)}.btn-green:hover{background:rgba(74,222,128,.15)}
 .sync-badge{display:flex;align-items:center;gap:5px;font-size:10px;color:#555a68}
 .sdot{width:6px;height:6px;border-radius:50%;background:#555a68;transition:.3s;flex-shrink:0}
 .sdot.ok{background:#2dd4a4}.sdot.busy{background:#f4b942;animation:blink .8s infinite}.sdot.err{background:#f26b5b}
@@ -47,29 +48,27 @@ body{font-family:system-ui,-apple-system,sans-serif;background:#0d0f14;color:#e2
 .gwho{padding-right:6px;font-size:9px;color:#555a68;white-space:nowrap}
 .gcell{height:26px;border-right:1px solid rgba(255,255,255,.04);position:relative}
 .gcell.tc{background:rgba(242,107,91,.04)}
-/* BARRA PLANEJADA */
-.gbar{height:8px;border-radius:3px;position:absolute;top:4px;left:0;display:flex;align-items:center;padding:0 4px;font-size:8px;font-weight:500;cursor:pointer;transition:filter .12s;white-space:nowrap;overflow:hidden;opacity:.55}
-.gbar:hover{filter:brightness(1.2);opacity:.8}
-.gbar.gp{background:rgba(124,110,247,.5);color:#a99fff;border:1px solid rgba(124,110,247,.5)}
-.gbar.gT{background:rgba(45,212,164,.4);color:#2dd4a4;border:1px solid rgba(45,212,164,.5)}
-.gbar.gB{background:rgba(91,156,246,.4);color:#7ab4f8;border:1px solid rgba(91,156,246,.5)}
-.gbar.gA{background:rgba(244,185,66,.4);color:#f4b942;border:1px solid rgba(244,185,66,.5)}
-.gbar.adj{border-style:dashed!important}
-.gbar.done{opacity:.25}
-.gbar.hl{box-shadow:0 0 0 2px rgba(255,255,255,.18);opacity:.9}
-/* BARRA REAL */
-.gbar-real{height:8px;border-radius:3px;position:absolute;top:14px;left:0;display:flex;align-items:center;padding:0 4px;font-size:8px;font-weight:600;cursor:pointer;white-space:nowrap;overflow:hidden}
-.gbar-real.rp{background:rgba(124,110,247,.9);border:1px solid #7c6ef7}
-.gbar-real.rT{background:rgba(45,212,164,.9);border:1px solid #2dd4a4}
-.gbar-real.rB{background:rgba(91,156,246,.9);border:1px solid #5b9cf6}
-.gbar-real.rA{background:rgba(244,185,66,.9);border:1px solid #f4b942;color:#1a1200}
-.gbar-real.rfim{opacity:.6;border-style:dashed!important}
-.tvl{position:absolute;top:0;bottom:0;width:1px;background:#f26b5b;opacity:.65;pointer-events:none}
-.grow{height:28px}
-.grow:hover td{background:rgba(255,255,255,.012)}.grow.hlr td{background:rgba(124,110,247,.05)!important}
+.gbar{height:8px;border-radius:3px;position:absolute;top:4px;left:0;display:flex;align-items:center;padding:0 4px;font-size:8px;cursor:pointer;transition:filter .12s;white-space:nowrap;overflow:hidden;opacity:.55}
+.gbar:hover{filter:brightness(1.2);opacity:.85}
+.gbar.gp{background:rgba(124,110,247,.5);border:1px solid rgba(124,110,247,.5)}
+.gbar.gT{background:rgba(45,212,164,.4);border:1px solid rgba(45,212,164,.5)}
+.gbar.gB{background:rgba(91,156,246,.4);border:1px solid rgba(91,156,246,.5)}
+.gbar.gA{background:rgba(244,185,66,.4);border:1px solid rgba(244,185,66,.5)}
+.gbar.gG{background:rgba(74,222,128,.4);border:1px solid rgba(74,222,128,.5)}
+.gbar.adj{border-style:dashed!important}.gbar.done{opacity:.22}.gbar.hl{box-shadow:0 0 0 2px rgba(255,255,255,.2);opacity:.9}
+.gbar-real{height:8px;border-radius:3px;position:absolute;top:15px;left:0;overflow:hidden}
+.gbar-real.rp{background:#7c6ef7}.gbar-real.rT{background:#2dd4a4}.gbar-real.rB{background:#5b9cf6}
+.gbar-real.rA{background:#f4b942}.gbar-real.rG{background:#4ade80}.gbar-real.rfim{opacity:.55;border:1px dashed currentColor}
+.tvl{position:absolute;top:0;bottom:0;width:1px;background:#f26b5b;opacity:.6;pointer-events:none}
+.grow{height:28px}.grow:hover td{background:rgba(255,255,255,.012)}.grow.hlr td{background:rgba(124,110,247,.05)!important}
+.grow.new-task td{background:rgba(74,222,128,.03)}
+/* LANES */
 .lanes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:rgba(255,255,255,.06);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
 .lane{background:#13161e}
-.lhdr{padding:9px 11px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,.06)}
+.lhdr{padding:9px 11px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.06)}
+.lhdr-left{display:flex;align-items:center;gap:8px}
+.lbtn{font-size:10px;padding:3px 8px;border:1px solid rgba(74,222,128,.3);border-radius:6px;background:rgba(74,222,128,.06);color:#4ade80;cursor:pointer;font-family:inherit;transition:.15s}
+.lbtn:hover{background:rgba(74,222,128,.14)}
 .av{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;flex-shrink:0}
 .avp{background:rgba(124,110,247,.12);color:#7c6ef7;border:1px solid rgba(124,110,247,.3)}
 .avt{background:rgba(45,212,164,.1);color:#2dd4a4;border:1px solid rgba(45,212,164,.3)}
@@ -77,39 +76,39 @@ body{font-family:system-ui,-apple-system,sans-serif;background:#0d0f14;color:#e2
 .ava{background:rgba(244,185,66,.1);color:#f4b942;border:1px solid rgba(244,185,66,.3)}
 .lname{font-size:11px;font-weight:600}.lrole{font-size:9px;color:#555a68}
 .cards{padding:7px;display:flex;flex-direction:column;gap:5px;min-height:140px}
+/* CARD */
 .card{border-radius:8px;border:1px solid rgba(255,255,255,.07);padding:9px 10px;background:#181b24;cursor:pointer;transition:.15s}
 .card:hover{border-color:rgba(255,255,255,.13);background:#1d2030}
 .card.hl{border-color:rgba(124,110,247,.4);background:rgba(124,110,247,.08)}
-/* card em execução — borda pulsante */
-.card.exec{border-color:rgba(45,212,164,.5);box-shadow:0 0 0 1px rgba(45,212,164,.2)}
-.cardh{display:flex;gap:5px;margin-bottom:4px}
+.card.exec{border-color:rgba(45,212,164,.45);box-shadow:0 0 0 1px rgba(45,212,164,.15)}
+.card.new-card{border-color:rgba(74,222,128,.35);background:rgba(74,222,128,.04)}
+.cardh{display:flex;gap:5px;margin-bottom:4px;align-items:flex-start}
 .dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:4px}
-.dbl{background:#5b9cf6}.dtl{background:#2dd4a4}.dal{background:#f4b942}.dgl{background:#555a68}
-/* dot pulsando quando em execução */
+.dbl{background:#5b9cf6}.dtl{background:#2dd4a4}.dal{background:#f4b942}.dgl{background:#555a68}.dgl2{background:#4ade80}
 .dot.exec-dot{background:#2dd4a4;animation:execpulse 1.5s infinite}
 @keyframes execpulse{0%,100%{box-shadow:0 0 0 0 rgba(45,212,164,.6)}60%{box-shadow:0 0 0 4px rgba(45,212,164,0)}}
-.ctitle{font-size:10px;font-weight:500;line-height:1.4}
+.ctitle{font-size:10px;font-weight:500;line-height:1.4;flex:1}
 .card.hl .ctitle{color:#c4b8ff}
 .cstrip{height:2px;border-radius:1px;margin-bottom:5px;opacity:.45}
-.csp{background:#7c6ef7}.cst{background:#2dd4a4}.csb{background:#5b9cf6}.csa{background:#f4b942}
+.csp{background:#7c6ef7}.cst{background:#2dd4a4}.csb{background:#5b9cf6}.csa{background:#f4b942}.csg{background:#4ade80}
 .cdates{display:flex;align-items:center;gap:3px;flex-wrap:wrap;margin-bottom:4px}
 .tag{font-size:9px;padding:2px 6px;border-radius:20px;font-weight:500}
 .tgp{background:rgba(124,110,247,.15);color:#a99fff}.tgt{background:rgba(45,212,164,.1);color:#2dd4a4}
 .tgb{background:rgba(91,156,246,.1);color:#7ab4f8}.tga{background:rgba(244,185,66,.1);color:#f4b942}
-.tgw{background:rgba(244,185,66,.1);color:#f4b942;border:1px dashed rgba(244,185,66,.3)}
-/* badge de execução real */
-.exec-bar{display:flex;align-items:center;gap:5px;background:rgba(45,212,164,.08);border:1px solid rgba(45,212,164,.25);border-radius:6px;padding:4px 7px;margin:4px 0;flex-wrap:wrap}
-.exec-bar .elbl{font-size:9px;color:#2dd4a4;font-weight:600;white-space:nowrap}
+.tgg{background:rgba(74,222,128,.1);color:#4ade80}.tgw{background:rgba(244,185,66,.1);color:#f4b942;border:1px dashed rgba(244,185,66,.3)}
+.exec-bar{display:flex;align-items:center;gap:5px;background:rgba(45,212,164,.07);border:1px solid rgba(45,212,164,.2);border-radius:6px;padding:4px 7px;margin:4px 0;flex-wrap:wrap}
+.exec-bar .elbl{font-size:9px;color:#2dd4a4;font-weight:600}
 .exec-bar .edt{font-size:9px;color:#8b909e}
 .exec-bar .esep{color:#555a68;font-size:9px}
 .exec-bar .efim{color:#f4b942}
-.exec-bar .eprev{color:#555a68;font-style:italic}
 .adjn{font-size:9px;color:#555a68;font-style:italic;margin-top:2px}
+.new-badge{font-size:8px;padding:1px 5px;border-radius:20px;background:rgba(74,222,128,.15);color:#4ade80;border:1px solid rgba(74,222,128,.3);margin-left:4px;flex-shrink:0}
 .cbtns{display:flex;gap:3px;flex-wrap:wrap;margin-top:6px}
 .cbtn{font-size:9px;padding:3px 7px;border:1px solid rgba(255,255,255,.1);border-radius:5px;background:transparent;cursor:pointer;color:#666b7a;font-family:inherit;display:inline-flex;align-items:center;gap:3px;transition:.12s}
 .cbtn:hover{background:#0d0f14;color:#e2e4ec}
 .cbtn.dn{border-color:rgba(45,212,164,.3);color:#2dd4a4;background:rgba(45,212,164,.08)}
-.cbtn.exec-btn{border-color:rgba(45,212,164,.4);color:#2dd4a4;background:rgba(45,212,164,.1)}
+.cbtn.exec-btn{border-color:rgba(45,212,164,.35);color:#2dd4a4;background:rgba(45,212,164,.07)}
+.cbtn.del-btn{border-color:rgba(242,107,91,.25);color:rgba(242,107,91,.6)}.cbtn.del-btn:hover{background:rgba(242,107,91,.1);color:#f26b5b;border-color:#f26b5b}
 /* OBS */
 .obs-sec{padding:14px 20px;background:#13161e;border-top:1px solid rgba(255,255,255,.06)}
 .obs-sec h2{font-size:11px;font-weight:500;color:#8b909e;margin-bottom:10px}
@@ -134,29 +133,36 @@ body{font-family:system-ui,-apple-system,sans-serif;background:#0d0f14;color:#e2
 .oadd button{font-size:16px;line-height:1;padding:5px 10px;border:1px solid rgba(255,255,255,.1);border-radius:5px;background:transparent;cursor:pointer;color:#8b909e;font-family:inherit;transition:.12s}
 .oadd button:hover{background:#1e2230;color:#e2e4ec}
 /* MODAL */
-.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:200;align-items:center;justify-content:center;padding:20px}
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:200;align-items:center;justify-content:center;padding:20px;overflow-y:auto}
 .modal-bg.open{display:flex}
-.modal{background:#13161e;border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:22px;width:100%;max-width:360px}
+.modal{background:#13161e;border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:22px;width:100%;max-width:420px;margin:auto}
 .modal h3{font-size:14px;font-weight:600;margin-bottom:3px}
 .modal-sub{font-size:10px;color:#666b7a;margin-bottom:16px;line-height:1.5}
 .modal-section{font-size:9px;color:#555a68;text-transform:uppercase;letter-spacing:.06em;margin:14px 0 8px;padding-bottom:4px;border-bottom:1px solid rgba(255,255,255,.06)}
 .mf{margin-bottom:10px}
 .mf label{font-size:9px;color:#666b7a;display:block;margin-bottom:3px;text-transform:uppercase;letter-spacing:.05em}
-.mf input{width:100%;font-size:12px;padding:7px 9px;border:1px solid rgba(255,255,255,.1);border-radius:7px;background:#181b24;color:#e2e4ec;font-family:inherit;outline:none;transition:border-color .15s}
-.mf input:focus{border-color:#7c6ef7}
+.mf input,.mf select{width:100%;font-size:12px;padding:7px 9px;border:1px solid rgba(255,255,255,.1);border-radius:7px;background:#181b24;color:#e2e4ec;font-family:inherit;outline:none;transition:border-color .15s}
+.mf input:focus,.mf select:focus{border-color:#7c6ef7}
 .mf input::placeholder{color:#555a68}
+.mf select option{background:#13161e}
 .mf-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .mbtns{display:flex;gap:7px;justify-content:flex-end;margin-top:16px}
 .mbtns button{font-size:11px;padding:7px 16px;border-radius:7px;border:1px solid rgba(255,255,255,.1);background:transparent;cursor:pointer;color:#8b909e;font-family:inherit;transition:.12s}
 .mbtns button:hover{background:#1e2230}
 .mbtns .ok{background:#7c6ef7;border-color:#7c6ef7;color:#fff;font-weight:500}.mbtns .ok:hover{opacity:.88}
+.mbtns .ok-green{background:#16a34a;border-color:#16a34a;color:#fff;font-weight:500}.mbtns .ok-green:hover{opacity:.88}
+/* COLOR PICKER */
+.color-picker{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
+.cp-opt{width:22px;height:22px;border-radius:50%;cursor:pointer;border:2px solid transparent;transition:.15s}
+.cp-opt.selected{border-color:#fff;transform:scale(1.15)}
+.cp-opt:hover{transform:scale(1.1)}
 .toast{position:fixed;bottom:18px;right:18px;background:#13161e;border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:9px 14px;font-size:11px;z-index:300;display:flex;align-items:center;gap:7px;transition:opacity .3s;pointer-events:none;max-width:300px}
 .toast.hide{opacity:0}
 .footer{padding:12px 20px;border-top:1px solid rgba(255,255,255,.06);display:flex;align-items:center;justify-content:space-between;background:#13161e;gap:8px;flex-wrap:wrap}
 .ftxt{font-size:9px;color:#555a68}
 ::-webkit-scrollbar{width:4px;height:4px}::-webkit-scrollbar-track{background:#13161e}::-webkit-scrollbar-thumb{background:#1e2230;border-radius:4px}
-@media(max-width:800px){.stats{grid-template-columns:repeat(3,1fr)}.lanes{grid-template-columns:repeat(2,1fr)}.obs-grid{grid-template-columns:1fr}}
-@media(max-width:480px){.stats{grid-template-columns:repeat(2,1fr)}.lanes{grid-template-columns:1fr}}
+@media(max-width:900px){.stats{grid-template-columns:repeat(3,1fr)}.lanes{grid-template-columns:repeat(2,1fr)}.obs-grid{grid-template-columns:1fr}}
+@media(max-width:500px){.stats{grid-template-columns:repeat(2,1fr)}.lanes{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -169,42 +175,61 @@ body{font-family:system-ui,-apple-system,sans-serif;background:#0d0f14;color:#e2
   <div class="topbar-right">
     <span style="font-size:10px;color:#555a68" id="today-lbl"></span>
     <div class="sync-badge"><div class="sdot busy" id="sdot"></div><span id="slbl">conectando...</span></div>
+    <button class="btn btn-green" onclick="openNewActivity()">＋ Nova atividade</button>
     <button class="btn btn-teal" onclick="exportCSV()">⬇ CSV</button>
-    <button class="btn btn-purple" onclick="copyLink()">🔗 Copiar link</button>
+    <button class="btn btn-purple" onclick="copyLink()">🔗 Link</button>
   </div>
 </div>
 
 <div class="page-hdr">
   <h1>Planner Estratégico — Painel PMO + OnePage de Projetos</h1>
-  <p>Dados compartilhados em tempo real · Execução real registrada e visível para todos</p>
+  <p>Dados compartilhados em tempo real · Execução real registrada · Novas atividades visíveis para todos</p>
 </div>
 
 <div class="stats">
-  <div class="stat"><div class="stat-lbl">Entregas</div><div class="stat-val" id="s1">—</div></div>
+  <div class="stat"><div class="stat-lbl">Total entregas</div><div class="stat-val" id="s1">—</div></div>
   <div class="stat"><div class="stat-lbl">Em andamento</div><div class="stat-val cb" id="s2">—</div></div>
-  <div class="stat"><div class="stat-lbl">Concluídas</div><div class="stat-val ct" id="s3">—</div></div>
-  <div class="stat"><div class="stat-lbl">Em execução</div><div class="stat-val" style="color:#2dd4a4" id="s4">—</div></div>
+  <div class="stat"><div class="stat-lbl">Em execução</div><div class="stat-val ct" id="s3">—</div></div>
+  <div class="stat"><div class="stat-lbl">Concluídas</div><div class="stat-val ca" id="s4">—</div></div>
   <div class="stat"><div class="stat-lbl">Dias restantes</div><div class="stat-val cr" id="s5">—</div></div>
 </div>
 
-<div class="sec-hdr"><div class="sec-l">📊 Gráfico de Gantt — planejado (acima) vs execução real (abaixo)</div><span class="pill">12/5 — 5/6 · 2025</span></div>
+<div class="sec-hdr">
+  <div class="sec-l">📊 Gráfico de Gantt — planejado (claro) vs execução real (sólido)</div>
+  <span class="pill">12/5 — 5/6 · 2025</span>
+</div>
 <div class="legend">
-  <span class="li"><span class="lb" style="background:rgba(124,110,247,.35)"></span>Vivian — planejado</span>
-  <span class="li"><span class="lb" style="background:rgba(45,212,164,.35)"></span>Guilherme — planejado</span>
-  <span class="li"><span class="lb" style="background:rgba(91,156,246,.35)"></span>Vitor — planejado</span>
-  <span class="li"><span class="lb" style="background:rgba(244,185,66,.35)"></span>Rodrigo — planejado</span>
-  <span class="li"><span class="lb" style="background:#2dd4a4;opacity:.9"></span>Execução real (sólido)</span>
+  <span class="li"><span class="lb" style="background:rgba(124,110,247,.35)"></span>Vivian</span>
+  <span class="li"><span class="lb" style="background:rgba(45,212,164,.35)"></span>Guilherme</span>
+  <span class="li"><span class="lb" style="background:rgba(91,156,246,.35)"></span>Vitor</span>
+  <span class="li"><span class="lb" style="background:rgba(244,185,66,.35)"></span>Rodrigo</span>
+  <span class="li"><span class="lb" style="background:rgba(74,222,128,.35)"></span>Nova atividade</span>
+  <span class="li"><span class="lb" style="background:#2dd4a4;opacity:.9"></span>Execução real</span>
   <span class="li"><span class="lb" style="background:#f26b5b;opacity:.7"></span>Hoje</span>
-  <span class="li"><span class="lb" style="opacity:.25;background:#aaa"></span>Concluído</span>
 </div>
 <div class="gw"><div id="gantt"></div></div>
 
-<div class="sec-hdr"><div class="sec-l">🗂 Cards por responsável — clique para ver detalhes</div></div>
+<div class="sec-hdr">
+  <div class="sec-l">🗂 Cards por responsável</div>
+  <button class="btn btn-green" style="font-size:10px;padding:4px 10px" onclick="openNewActivity()">＋ Nova atividade</button>
+</div>
 <div class="lanes">
-  <div class="lane"><div class="lhdr"><div class="av avp">V</div><div><div class="lname">Vivian</div><div class="lrole">Indicadores</div></div></div><div class="cards" id="lv"></div></div>
-  <div class="lane"><div class="lhdr"><div class="av avt">G</div><div><div class="lname">Guilherme</div><div class="lrole">Líder de TRL</div></div></div><div class="cards" id="lg"></div></div>
-  <div class="lane"><div class="lhdr"><div class="av avb">V</div><div><div class="lname">Vitor</div><div class="lrole">Ficha de Projetos</div></div></div><div class="cards" id="lvi"></div></div>
-  <div class="lane"><div class="lhdr"><div class="av ava">R</div><div><div class="lname">Rodrigo</div><div class="lrole">Líder de Dados</div></div></div><div class="cards" id="lr2"></div></div>
+  <div class="lane">
+    <div class="lhdr"><div class="lhdr-left"><div class="av avp">V</div><div><div class="lname">Vivian</div><div class="lrole">Indicadores</div></div></div><button class="lbtn" onclick="openNewActivity('vivian')">＋</button></div>
+    <div class="cards" id="lv"></div>
+  </div>
+  <div class="lane">
+    <div class="lhdr"><div class="lhdr-left"><div class="av avt">G</div><div><div class="lname">Guilherme</div><div class="lrole">Líder de TRL</div></div></div><button class="lbtn" onclick="openNewActivity('guilherme')">＋</button></div>
+    <div class="cards" id="lg"></div>
+  </div>
+  <div class="lane">
+    <div class="lhdr"><div class="lhdr-left"><div class="av avb">V</div><div><div class="lname">Vitor</div><div class="lrole">Ficha de Projetos</div></div></div><button class="lbtn" onclick="openNewActivity('vitor')">＋</button></div>
+    <div class="cards" id="lvi"></div>
+  </div>
+  <div class="lane">
+    <div class="lhdr"><div class="lhdr-left"><div class="av ava">R</div><div><div class="lname">Rodrigo</div><div class="lrole">Líder de Dados</div></div></div><button class="lbtn" onclick="openNewActivity('rodrigo')">＋</button></div>
+    <div class="cards" id="lr2"></div>
+  </div>
 </div>
 
 <div class="obs-sec">
@@ -213,25 +238,26 @@ body{font-family:system-ui,-apple-system,sans-serif;background:#0d0f14;color:#e2
 </div>
 
 <div class="footer">
-  <div class="ftxt">PMO Planner · 2025 · Supabase · sincronização automática a cada 10s</div>
-  <div style="display:flex;gap:6px">
+  <div class="ftxt">PMO Planner · 2025 · Supabase · sincronização a cada 10s</div>
+  <div style="display:flex;gap:6px;flex-wrap:wrap">
+    <button class="btn btn-green" onclick="openNewActivity()">＋ Nova atividade</button>
     <button class="btn btn-teal" onclick="exportCSV()">⬇ CSV</button>
     <button class="btn btn-purple" onclick="copyLink()">🔗 Compartilhar</button>
   </div>
 </div>
 
-<!-- MODAL UNIFICADO: prazo + execução real -->
-<div class="modal-bg" id="modal">
+<!-- MODAL: gerenciar tarefa existente -->
+<div class="modal-bg" id="modal-task">
   <div class="modal">
-    <h3 id="mtitle">Gerenciar tarefa</h3>
-    <p class="modal-sub" id="mtask"></p>
+    <h3>Gerenciar tarefa</h3>
+    <p class="modal-sub" id="mtask-title"></p>
 
     <div class="modal-section">📅 Prazo planejado</div>
     <div class="mf-row">
-      <div class="mf"><label>Início planejado</label><input id="ms" type="text" placeholder="ex: 12/05"></div>
-      <div class="mf"><label>Fim planejado</label><input id="me" type="text" placeholder="ex: 15/05"></div>
+      <div class="mf"><label>Início planejado</label><input id="ms" type="text" placeholder="dd/mm"></div>
+      <div class="mf"><label>Fim planejado</label><input id="me" type="text" placeholder="dd/mm"></div>
     </div>
-    <div class="mf"><label>Justificativa de ajuste</label><input id="mr" type="text" placeholder="Motivo do ajuste..."></div>
+    <div class="mf"><label>Justificativa de ajuste</label><input id="mr" type="text" placeholder="Motivo..."></div>
 
     <div class="modal-section">🟢 Execução real</div>
     <div class="mf-row">
@@ -240,12 +266,50 @@ body{font-family:system-ui,-apple-system,sans-serif;background:#0d0f14;color:#e2
     </div>
     <div class="mf" style="display:flex;align-items:center;gap:8px">
       <input type="checkbox" id="exec-concluido" style="width:14px;height:14px;cursor:pointer">
-      <label for="exec-concluido" style="font-size:10px;color:#8b909e;cursor:pointer;text-transform:none;letter-spacing:0">Marcar data fim como encerramento real (tarefa concluída)</label>
+      <label for="exec-concluido" style="font-size:10px;color:#8b909e;cursor:pointer;text-transform:none;letter-spacing:0">Data fim = encerramento real (marcar como concluída)</label>
     </div>
 
     <div class="mbtns">
-      <button onclick="closeModal()">Cancelar</button>
-      <button class="ok" onclick="saveAll()">Salvar tudo</button>
+      <button onclick="closeModals()">Cancelar</button>
+      <button class="ok" onclick="saveTask()">Salvar</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: nova atividade -->
+<div class="modal-bg" id="modal-new">
+  <div class="modal">
+    <h3>＋ Nova atividade</h3>
+    <p class="modal-sub">Preencha os dados da nova atividade. Ela aparecerá no Gantt e nos cards para todos.</p>
+
+    <div class="mf"><label>Título da atividade</label><input id="new-title" type="text" placeholder="Ex: Análise de dados de maturidade"></div>
+    <div class="mf">
+      <label>Responsável</label>
+      <select id="new-lane">
+        <option value="vivian">Vivian — Indicadores</option>
+        <option value="guilherme">Guilherme — Líder de TRL</option>
+        <option value="vitor">Vitor — Ficha de Projetos</option>
+        <option value="rodrigo">Rodrigo — Líder de Dados</option>
+      </select>
+    </div>
+    <div class="mf-row">
+      <div class="mf"><label>Início planejado</label><input id="new-s" type="date"></div>
+      <div class="mf"><label>Fim planejado</label><input id="new-e" type="date"></div>
+    </div>
+    <div class="mf">
+      <label>Cor da atividade no Gantt</label>
+      <div class="color-picker" id="color-picker">
+        <div class="cp-opt selected" data-color="p" style="background:#7c6ef7" title="Roxo"></div>
+        <div class="cp-opt" data-color="T" style="background:#2dd4a4" title="Verde-água"></div>
+        <div class="cp-opt" data-color="B" style="background:#5b9cf6" title="Azul"></div>
+        <div class="cp-opt" data-color="A" style="background:#f4b942" title="Âmbar"></div>
+        <div class="cp-opt" data-color="G" style="background:#4ade80" title="Verde"></div>
+      </div>
+    </div>
+
+    <div class="mbtns">
+      <button onclick="closeModals()">Cancelar</button>
+      <button class="ok-green" onclick="saveNewActivity()">＋ Cadastrar atividade</button>
     </div>
   </div>
 </div>
@@ -258,52 +322,76 @@ const SUPA_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsI
 const sb = supabase.createClient(SUPA_URL, SUPA_KEY);
 
 const Y = 2025;
-const TASKS = [
-  {id:'v1', lane:'vivian',    title:'Consolidar dados dos Indicadores',          s:[5,12],e:[5,15],color:'p'},
-  {id:'v2', lane:'vivian',    title:'Entrega do Modelo do Relatório do OnePage', s:[5,15],e:[5,19],color:'p'},
-  {id:'v3', lane:'vivian',    title:'Finalização do OnePage',                    s:[5,26],e:[5,26],color:'p'},
-  {id:'g1', lane:'guilherme', title:'Tabular as TRLs',                           s:[5,12],e:[5,14],color:'T'},
-  {id:'g2', lane:'guilherme', title:'Verificar diagnósticos do modelo',          s:[5,14],e:[5,18],color:'T'},
-  {id:'g3', lane:'guilherme', title:'Geração dos Resultados',                    s:[5,19],e:[5,20],color:'T'},
-  {id:'g4', lane:'guilherme', title:'Finalização OnePage IMAT',                  s:[5,29],e:[5,29],color:'T'},
-  {id:'vi1',lane:'vitor',     title:'Validação Estrutura da Ficha de Projetos',  s:[5,12],e:[5,18],color:'B'},
-  {id:'vi2',lane:'vitor',     title:'Input das informações',                     s:[5,18],e:[5,22],color:'B'},
-  {id:'vi3',lane:'vitor',     title:'Apresentação OnePage Finalizado',           s:[6,3], e:[6,3], color:'B'},
-  {id:'r1', lane:'rodrigo',   title:'Análise e Parametrização — Dash PMO',       s:[5,19],e:[5,25],color:'A'},
-  {id:'r2', lane:'rodrigo',   title:'Validação Resultados — Dash PMO',           s:[5,20],e:[5,28],color:'A'},
-  {id:'r3', lane:'rodrigo',   title:'Modelo Inicial parametrizado do OnePage',   s:[5,25],e:[6,3], color:'A'},
+
+// Tarefas base (fixas)
+const BASE_TASKS = [
+  {id:'v1', lane:'vivian',    title:'Consolidar dados dos Indicadores',          s:[5,12],e:[5,15],color:'p', base:true},
+  {id:'v2', lane:'vivian',    title:'Entrega do Modelo do Relatório do OnePage', s:[5,15],e:[5,19],color:'p', base:true},
+  {id:'v3', lane:'vivian',    title:'Finalização do OnePage',                    s:[5,26],e:[5,26],color:'p', base:true},
+  {id:'g1', lane:'guilherme', title:'Tabular as TRLs',                           s:[5,12],e:[5,14],color:'T', base:true},
+  {id:'g2', lane:'guilherme', title:'Verificar diagnósticos do modelo',          s:[5,14],e:[5,18],color:'T', base:true},
+  {id:'g3', lane:'guilherme', title:'Geração dos Resultados',                    s:[5,19],e:[5,20],color:'T', base:true},
+  {id:'g4', lane:'guilherme', title:'Finalização OnePage IMAT',                  s:[5,29],e:[5,29],color:'T', base:true},
+  {id:'vi1',lane:'vitor',     title:'Validação Estrutura da Ficha de Projetos',  s:[5,12],e:[5,18],color:'B', base:true},
+  {id:'vi2',lane:'vitor',     title:'Input das informações',                     s:[5,18],e:[5,22],color:'B', base:true},
+  {id:'vi3',lane:'vitor',     title:'Apresentação OnePage Finalizado',           s:[6,3], e:[6,3], color:'B', base:true},
+  {id:'r1', lane:'rodrigo',   title:'Análise e Parametrização — Dash PMO',       s:[5,19],e:[5,25],color:'A', base:true},
+  {id:'r2', lane:'rodrigo',   title:'Validação Resultados — Dash PMO',           s:[5,20],e:[5,28],color:'A', base:true},
+  {id:'r3', lane:'rodrigo',   title:'Modelo Inicial parametrizado do OnePage',   s:[5,25],e:[6,3], color:'A', base:true},
 ];
+
 const NAMES   = {vivian:'Vivian',guilherme:'Guilherme',vitor:'Vitor',rodrigo:'Rodrigo'};
 const LANE_EL = {lv:'vivian',lg:'guilherme',lvi:'vitor',lr2:'rodrigo'};
 const AVC     = {vivian:'avp',guilherme:'avt',vitor:'avb',rodrigo:'ava'};
+const COLOR_MAP = {p:'#7c6ef7',T:'#2dd4a4',B:'#5b9cf6',A:'#f4b942',G:'#4ade80'};
 
+let TASKS = [...BASE_TASKS]; // merge com atividades do banco
 let tStatus={}, tAdjs={}, tExec={}, obsData={vivian:[],guilherme:[],vitor:[],rodrigo:[]};
-let hlId=null, editId=null, ttimer=null;
+let dbActivities=[]; // atividades cadastradas no banco
+let hlId=null, editId=null, selectedColor='p', ttimer=null;
 
-const ps=new Date(Y,4,12), pe=new Date(Y,5,5);
-const allDays=[];
-for(let i=0;i<=(pe-ps)/86400000;i++){const d=new Date(ps);d.setDate(d.getDate()+i);allDays.push(d)}
+// Calcular range do Gantt dinamicamente
+function getGanttRange(){
+  let minD=new Date(Y,4,12), maxD=new Date(Y,5,5);
+  TASKS.forEach(t=>{
+    const s=getDates(t).s, e=getDates(t).e;
+    if(s<minD)minD=new Date(s); if(e>maxD)maxD=new Date(e);
+  });
+  maxD.setDate(maxD.getDate()+2);
+  return{ps:minD,pe:maxD};
+}
 
-function toDate(a){return new Date(Y,a[0]-1,a[1])}
-function off(d){return Math.max(0,Math.round((d-ps)/86400000))}
+function buildAllDays(){
+  const {ps,pe}=getGanttRange();
+  const days=[];
+  for(let i=0;i<=(pe-ps)/86400000;i++){const d=new Date(ps);d.setDate(d.getDate()+i);days.push(d)}
+  return{days,ps};
+}
+
+function off(d,ps){return Math.max(0,Math.round((d-ps)/86400000))}
 function fmt(d){return d.getDate()+'/'+(d.getMonth()+1)}
 function disp(d){return String(d.getDate()).padStart(2,'0')+'/'+String(d.getMonth()+1).padStart(2,'0')}
-function dispFull(isoDate){if(!isoDate)return '';const[,m,d]=isoDate.split('-');return `${parseInt(d)}/${parseInt(m)}`}
-function toISO(ddmm){const p=ddmm.split('/');if(p.length!==2)return '';return `${Y}-${p[1].padStart(2,'0')}-${p[0].padStart(2,'0')}`}
 function parseD(s){const p=s.split('/');if(p.length!==2)return null;const dv=parseInt(p[0]),mv=parseInt(p[1]);return(isNaN(dv)||isNaN(mv))?null:new Date(Y,mv-1,dv)}
 function isoToDate(iso){if(!iso)return null;const[,m,d]=iso.split('-');return new Date(Y,parseInt(m)-1,parseInt(d))}
+function dispISO(iso){if(!iso)return '';const[,m,d]=iso.split('-');return `${parseInt(d)}/${parseInt(m)}`}
 function fmtTs(iso){if(!iso)return '';const d=new Date(iso);return d.getDate()+'/'+(d.getMonth()+1)+' '+String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0')}
 function setSY(st,lb){document.getElementById('sdot').className='sdot '+st;document.getElementById('slbl').textContent=lb}
 
 function getDates(t){
+  if(!t.base){
+    // atividade do banco: usa datas ISO
+    return{s:isoToDate(t.inicio_plan)||new Date(),e:isoToDate(t.fim_plan)||new Date(),adj:false};
+  }
   const a=tAdjs[t.id];
-  if(a)return{s:parseD(a.start_date)||toDate(t.s),e:parseD(a.end_date)||toDate(t.e),adj:true};
-  return{s:toDate(t.s),e:toDate(t.e),adj:false};
+  if(a)return{s:parseD(a.start_date)||new Date(Y,t.s[0]-1,t.s[1]),e:parseD(a.end_date)||new Date(Y,t.e[0]-1,t.e[1]),adj:true};
+  return{s:new Date(Y,t.s[0]-1,t.s[1]),e:new Date(Y,t.e[0]-1,t.e[1]),adj:false};
 }
+
 function getStatus(t){
   const st=tStatus[t.id]||'pending';
   if(st==='done')return'done';
-  if(tExec[t.id])return'exec';
+  if(tExec[t.id]&&!tExec[t.id].fim_real)return'exec';
+  if(!t.base)return st;
   if(tAdjs[t.id])return'adj';
   return st;
 }
@@ -311,91 +399,90 @@ function getStatus(t){
 // ── CARREGAR DADOS ──
 async function loadAll(){
   try{
-    const [{data:tasks},{data:adjs},{data:exec},{data:obs}] = await Promise.all([
+    const [{data:tasks},{data:adjs},{data:exec},{data:obs},{data:ativs}] = await Promise.all([
       sb.from('pmo_tasks').select('*'),
       sb.from('pmo_adjustments').select('*'),
       sb.from('pmo_execucao').select('*'),
-      sb.from('pmo_observations').select('*').order('created_at',{ascending:true})
+      sb.from('pmo_observations').select('*').order('created_at',{ascending:true}),
+      sb.from('pmo_atividades').select('*').order('created_at',{ascending:true}),
     ]);
     tStatus={};(tasks||[]).forEach(r=>tStatus[r.id]=r.status);
     tAdjs={};(adjs||[]).forEach(r=>tAdjs[r.task_id]=r);
     tExec={};(exec||[]).forEach(r=>tExec[r.task_id]=r);
     obsData={vivian:[],guilherme:[],vitor:[],rodrigo:[]};
     (obs||[]).forEach(r=>{if(obsData[r.lane])obsData[r.lane].push(r)});
+
+    // Merge atividades do banco com base
+    dbActivities = (ativs||[]).map(r=>({
+      id:'db_'+r.id,
+      dbId:r.id,
+      lane:r.lane,
+      title:r.title,
+      inicio_plan:r.inicio_plan,
+      fim_plan:r.fim_plan,
+      color:r.color,
+      base:false,
+    }));
+    // Sincronizar status das atividades do banco
+    dbActivities.forEach(t=>{
+      const dbRow=(ativs||[]).find(r=>r.id===t.dbId);
+      if(dbRow)tStatus[t.id]=dbRow.status;
+    });
+    TASKS=[...BASE_TASKS,...dbActivities];
+
     setSY('ok','sincronizado');
     renderAll();
   }catch(e){setSY('err','erro de conexão');console.error(e)}
 }
 setInterval(loadAll,10000);
 
-// ── GANTT com dupla barra ──
+// ── GANTT ──
 function renderGantt(){
-  const C=19,L=185,W=65,now=new Date();
-  const ti=allDays.findIndex(d=>d.toDateString()===now.toDateString());
-  const hd=allDays.map((d,i)=>{
+  const {days,ps}=buildAllDays();
+  const C=18,L=185,W=65,now=new Date();
+  const ti=days.findIndex(d=>d.toDateString()===now.toDateString());
+
+  const hd=days.map((d,i)=>{
     const isT=d.toDateString()===now.toDateString(),show=d.getDay()===1||i===0||isT;
     return`<th style="min-width:${C}px;width:${C}px${isT?';color:#f26b5b;font-weight:700':''}" class="${isT?'tc':''}">${show?fmt(d):''}</th>`;
   }).join('');
 
   const rows=TASKS.map(t=>{
     const{s,e,adj}=getDates(t);
-    const so=off(s),eo=off(e),span=Math.max(1,eo-so+1);
+    const so=off(s,ps),eo=off(e,ps),span=Math.max(1,eo-so+1);
     const isDone=tStatus[t.id]==='done',isHl=hlId===t.id;
+    const isNew=!t.base;
+    const clsPlan=`gbar g${t.color}${adj?' adj':''}${isDone?' done':''}${isHl?' hl':''}`;
     const ex=tExec[t.id];
 
-    // barra planejada (topo)
-    const clsPlan=`gbar g${t.color}${adj?' adj':''}${isDone?' done':''}${isHl?' hl':''}`;
-
-    // barra real (baixo) — se houver execução registrada
-    let realBar='';
-    if(ex){
-      const rs=isoToDate(ex.inicio_real);
-      const re=ex.fim_real?isoToDate(ex.fim_real):now;
-      const rso=Math.max(0,off(rs));
-      const reo=Math.min(allDays.length-1,off(re));
-      const rspan=Math.max(1,reo-rso+1);
-      const clsReal=`gbar-real r${t.color}${ex.fim_real?' rfim':''}`;
-      const label=rspan>3?(ex.fim_real?'✓ Real':'▶ Real'):'';
-      realBar=`<div class="${clsReal}" style="width:${rspan*C}px;left:${rso*C}px" title="Execução real: ${dispFull(ex.inicio_real)} → ${ex.fim_real?dispFull(ex.fim_real):'em andamento'}">${label}</div>`;
-    }
-
-    const cells=allDays.map((d,i)=>{
+    const cells=days.map((d,i)=>{
       const isT=d.toDateString()===now.toDateString();
       let inn='';
       if(i===so){
-        inn+=`<div class="${clsPlan}" style="width:${span*C}px" onclick="hl('${t.id}')" title="Planejado: ${disp(s)} → ${disp(e)}"></div>`;
-        if(ti>=so&&ti<=eo)inn+=`<div class="tvl" style="left:${(ti-so)*C}px"></div>`;
-      }
-      // real bar é renderizada via absolute no primeiro cell da linha
-      return`<td class="gcell${isT?' tc':''}" style="min-width:${C}px;width:${C}px;position:relative">${inn}</td>`;
-    }).join('');
-
-    // Linha com altura dupla para acomodar as duas barras
-    return`<tr class="grow${isHl?' hlr':''}" style="position:relative">
-      <td class="glbl" style="min-width:${L}px;width:${L}px" onclick="hl('${t.id}')" title="${t.title}">${t.title}</td>
-      <td class="gwho" style="min-width:${W}px;width:${W}px">${NAMES[t.lane]}</td>
-      ${allDays.map((d,i)=>{
-        const isT=d.toDateString()===now.toDateString();
-        let inn='';
-        if(i===so) inn+=`<div class="${clsPlan}" style="width:${span*C}px" onclick="hl('${t.id}')" title="Planejado"></div>`;
+        inn+=`<div class="${clsPlan}" style="width:${span*C}px" onclick="hl('${t.id}')" title="${t.title} · ${disp(s)}→${disp(e)}"></div>`;
         if(ex){
           const rs=isoToDate(ex.inicio_real);
           const re=ex.fim_real?isoToDate(ex.fim_real):now;
-          const rso=Math.max(0,off(rs));
-          const reo=Math.min(allDays.length-1,off(re));
-          const rspan=Math.max(1,reo-rso+1);
-          if(i===rso){
-            const clsReal=`gbar-real r${t.color}${ex.fim_real?' rfim':''}`;
-            inn+=`<div class="${clsReal}" style="width:${rspan*C}px" title="Execução real: ${dispFull(ex.inicio_real)} → ${ex.fim_real?dispFull(ex.fim_real):'em andamento'}"></div>`;
+          if(rs){
+            const rso2=off(rs,ps),reo2=off(re,ps),rsp=Math.max(1,reo2-rso2+1);
+            const clsR=`gbar-real r${t.color}${ex.fim_real?' rfim':''}`;
+            // posicionar relativo ao início da linha
+            inn+=`<div class="${clsR}" style="width:${rsp*C}px;left:${(rso2-so)*C}px" title="Real: ${dispISO(ex.inicio_real)}→${ex.fim_real?dispISO(ex.fim_real):'hoje'}"></div>`;
           }
         }
-        if(i===so&&ti>=so&&ti<=off(e)) inn+=`<div class="tvl" style="left:${(ti-so)*C}px"></div>`;
-        return`<td class="gcell${isT?' tc':''}" style="min-width:${C}px;width:${C}px;position:relative">${inn}</td>`;
-      }).join('')}
+      }
+      if(i===so&&ti>=so&&ti<=eo) inn+=`<div class="tvl" style="left:${(ti-so)*C}px"></div>`;
+      return`<td class="gcell${isT?' tc':''}" style="min-width:${C}px;width:${C}px;position:relative">${inn}</td>`;
+    }).join('');
+
+    return`<tr class="grow${isHl?' hlr':''}${isNew?' new-task':''}">
+      <td class="glbl" style="min-width:${L}px;width:${L}px" onclick="hl('${t.id}')" title="${t.title}">${isNew?'⬡ ':''} ${t.title}</td>
+      <td class="gwho" style="min-width:${W}px;width:${W}px">${NAMES[t.lane]}</td>
+      ${cells}
     </tr>`;
   }).join('');
 
-  document.getElementById('gantt').innerHTML=`<table class="gtbl" style="table-layout:fixed"><colgroup><col style="width:${L}px"><col style="width:${W}px">${allDays.map(()=>`<col style="width:${C}px">`).join('')}</colgroup><thead><tr><th class="lh">Entrega</th><th class="lh">Resp.</th>${hd}</tr></thead><tbody>${rows}</tbody></table>`;
+  document.getElementById('gantt').innerHTML=`<table class="gtbl" style="table-layout:fixed"><colgroup><col style="width:${L}px"><col style="width:${W}px">${days.map(()=>`<col style="width:${C}px">`).join('')}</colgroup><thead><tr><th class="lh">Entrega</th><th class="lh">Resp.</th>${hd}</tr></thead><tbody>${rows}</tbody></table>`;
 }
 
 // ── CARDS ──
@@ -404,47 +491,44 @@ function renderCards(){
     document.getElementById(elId).innerHTML=TASKS.filter(t=>t.lane===lane).map(t=>{
       const{s,e,adj}=getDates(t);
       const isR=s.toDateString()!==e.toDateString();
-      const isDone=tStatus[t.id]==='done',isHl=hlId===t.id;
-      const ex=tExec[t.id];
-      const emExec=ex&&ex.em_execucao&&!ex.fim_real;
+      const isDone=tStatus[t.id]==='done',isHl=hlId===t.id,isNew=!t.base;
       const st=getStatus(t);
-      const dotCls=emExec?'dot exec-dot':(st==='done'?'dot dtl':st==='adj'?'dot dal':st==='active'?'dot dbl':'dot dgl');
-      const a=tAdjs[t.id];
-      const note=a&&a.reason?`<div class="adjn">↳ ${a.reason}</div>`:'';
+      const emExec=st==='exec';
+      const dotCls=emExec?'dot exec-dot':(isDone?'dot dtl':isNew?'dot dgl2':st==='adj'?'dot dal':st==='active'?'dot dbl':'dot dgl');
       const c=t.color.toLowerCase();
-      const tg={p:'tgp',t:'tgt',b:'tgb',a:'tga'}[c];
-      const sp={p:'csp',t:'cst',b:'csb',a:'csa'}[c];
+      const tg={p:'tgp',t:'tgt',b:'tgb',a:'tga',g:'tgg'}[c]||'tgg';
+      const sp={p:'csp',t:'cst',b:'csb',a:'csa',g:'csg'}[c]||'csg';
+      const a=tAdjs[t.id];
+      const ex=tExec[t.id];
 
-      // bloco de execução real
+      // bloco execução real
       let execBlock='';
       if(ex){
-        const fimLabel=ex.fim_real
-          ? `<span class="efim">✓ ${dispFull(ex.fim_real)}</span>`
-          : `<span class="eprev">▶ em andamento</span>`;
-        execBlock=`<div class="exec-bar">
-          <span class="elbl">▶ EXECUÇÃO REAL</span>
-          <span class="edt">Início: ${dispFull(ex.inicio_real)}</span>
-          <span class="esep">→</span>
-          <span class="edt">Fim: ${fimLabel}</span>
-        </div>`;
+        const fimLabel=ex.fim_real?`<span class="efim">✓ ${dispISO(ex.fim_real)}</span>`:`<span style="color:#555a68;font-style:italic">em andamento</span>`;
+        execBlock=`<div class="exec-bar"><span class="elbl">▶ REAL</span><span class="edt">${dispISO(ex.inicio_real)}</span><span class="esep">→</span><span class="edt">${fimLabel}</span></div>`;
       }
 
-      const execBtnLabel=ex?'✎ Editar execução':'▶ Registrar execução';
+      const deleteBtnHTML=isNew?`<button class="cbtn del-btn" onclick="event.stopPropagation();deleteActivity('${t.id}',${t.dbId})">✕ Excluir</button>`:'';
 
-      return`<div class="card${isHl?' hl':''}${emExec?' exec':''}" id="cd-${t.id}" onclick="hl('${t.id}')">
-        <div class="cardh"><span class="${dotCls}"></span><div class="ctitle">${t.title}</div></div>
+      return`<div class="card${isHl?' hl':''}${emExec?' exec':''}${isNew?' new-card':''}" id="cd-${t.id}" onclick="hl('${t.id}')">
+        <div class="cardh">
+          <span class="${dotCls}"></span>
+          <div class="ctitle">${t.title}</div>
+          ${isNew?'<span class="new-badge">novo</span>':''}
+        </div>
         <div class="cstrip ${sp}"></div>
         <div class="cdates">
           ${isR?`<span class="tag ${tg}">${disp(s)}</span><span style="font-size:9px;color:#555a68">→</span>`:''}
           <span class="tag ${tg}">${disp(e)}</span>
           ${adj?`<span class="tag tgw">ajustado</span>`:''}
         </div>
-        ${note}
+        ${a&&a.reason?`<div class="adjn">↳ ${a.reason}</div>`:''}
         ${execBlock}
         <div class="cbtns">
-          <button class="cbtn exec-btn" onclick="event.stopPropagation();openModal('${t.id}')">${execBtnLabel}</button>
+          <button class="cbtn exec-btn" onclick="event.stopPropagation();openTaskModal('${t.id}')">${ex?'✎ Editar':'▶ Execução / Prazo'}</button>
           <button class="cbtn${isDone?' dn':''}" onclick="event.stopPropagation();toggleDone('${t.id}')">✓ ${isDone?'Feito':'Concluir'}</button>
           <button class="cbtn" onclick="event.stopPropagation();hl('${t.id}')">▦</button>
+          ${deleteBtnHTML}
         </div>
       </div>`;
     }).join('');
@@ -455,11 +539,10 @@ function renderCards(){
 function renderObs(){
   document.getElementById('obs-grid').innerHTML=Object.keys(obsData).map(k=>{
     const entries=obsData[k].map(e=>`<div class="oitem" id="obs-${e.id}">
-      <div class="ometa">
-        <span class="oname">${NAMES[k]}</span>
+      <div class="ometa"><span class="oname">${NAMES[k]}</span>
         <div style="display:flex;align-items:center;gap:6px">
           <span class="otime">${fmtTs(e.created_at)}</span>
-          <button class="odel" onclick="deleteObs(${e.id},'${k}')" title="Excluir">✕</button>
+          <button class="odel" onclick="deleteObs(${e.id},'${k}')">✕</button>
         </div>
       </div>
       <div class="omsg">${e.message}</div>
@@ -480,36 +563,84 @@ function renderStats(){
   TASKS.forEach(t=>{
     const st=getStatus(t);
     if(st==='done')done++;
+    else if(st==='exec')exec++;
     else if(st==='active'||st==='adj')active++;
-    if(tExec[t.id]&&!tExec[t.id].fim_real)exec++;
   });
   document.getElementById('s1').textContent=TASKS.length;
   document.getElementById('s2').textContent=active;
-  document.getElementById('s3').textContent=done;
-  document.getElementById('s4').textContent=exec;
-  document.getElementById('s5').textContent=Math.max(0,Math.round((new Date(Y,5,3)-new Date())/86400000));
+  document.getElementById('s3').textContent=exec;
+  document.getElementById('s4').textContent=done;
+  const last=new Date(Y,5,3);
+  document.getElementById('s5').textContent=Math.max(0,Math.round((last-new Date())/86400000));
 }
 
 function renderAll(){renderStats();renderGantt();renderCards();renderObs()}
 
-// ── MODAL ──
-function openModal(id){
+// ── MODAL NOVA ATIVIDADE ──
+function openNewActivity(lane='vivian'){
+  document.getElementById('new-title').value='';
+  document.getElementById('new-lane').value=lane;
+  const today=new Date().toISOString().split('T')[0];
+  document.getElementById('new-s').value=today;
+  document.getElementById('new-e').value=today;
+  selectedColor='p';
+  document.querySelectorAll('.cp-opt').forEach(el=>{
+    el.classList.toggle('selected',el.dataset.color==='p');
+  });
+  document.getElementById('modal-new').classList.add('open');
+  setTimeout(()=>document.getElementById('new-title').focus(),100);
+}
+
+async function saveNewActivity(){
+  const title=document.getElementById('new-title').value.trim();
+  const lane=document.getElementById('new-lane').value;
+  const s=document.getElementById('new-s').value;
+  const e=document.getElementById('new-e').value;
+  if(!title){toast('Informe o título da atividade.');document.getElementById('new-title').focus();return;}
+  if(!s||!e){toast('Informe as datas de início e fim.');return;}
+  if(e<s){toast('A data de fim deve ser igual ou após o início.');return;}
+
+  const btn=document.querySelector('#modal-new .ok-green');
+  btn.textContent='Salvando...';btn.disabled=true;
+
+  const{data,error}=await sb.from('pmo_atividades').insert({
+    lane,title,inicio_plan:s,fim_plan:e,color:selectedColor,status:'pending'
+  }).select().single();
+
+  btn.textContent='＋ Cadastrar atividade';btn.disabled=false;
+  if(error){toast('Erro ao cadastrar. Tente novamente.');console.error(error);return;}
+
+  // Adicionar localmente
+  const newTask={id:'db_'+data.id,dbId:data.id,lane,title,inicio_plan:s,fim_plan:e,color:selectedColor,base:false};
+  dbActivities.push(newTask);
+  tStatus[newTask.id]='pending';
+  TASKS=[...BASE_TASKS,...dbActivities];
+
+  closeModals();
+  renderAll();
+  toast(`Atividade "${title}" cadastrada e visível para todos!`);
+
+  // Scroll ao card
+  setTimeout(()=>{const el=document.getElementById('cd-'+newTask.id);if(el)el.scrollIntoView({behavior:'smooth',block:'center'});},200);
+}
+
+// ── MODAL TAREFA EXISTENTE ──
+function openTaskModal(id){
   editId=id;
   const t=TASKS.find(x=>x.id===id);
   const{s,e}=getDates(t);
   const ex=tExec[id];
-  document.getElementById('mtask').textContent=t.title;
+  document.getElementById('mtask-title').textContent=t.title;
   document.getElementById('ms').value=disp(s);
   document.getElementById('me').value=disp(e);
   document.getElementById('mr').value=tAdjs[id]?.reason||'';
   document.getElementById('exec-s').value=ex?.inicio_real||'';
   document.getElementById('exec-e').value=ex?.fim_real||'';
   document.getElementById('exec-concluido').checked=!!(ex?.fim_real);
-  document.getElementById('modal').classList.add('open');
+  document.getElementById('modal-task').classList.add('open');
 }
-function closeModal(){document.getElementById('modal').classList.remove('open');editId=null}
 
-async function saveAll(){
+async function saveTask(){
   if(!editId)return;
   const s=document.getElementById('ms').value.trim();
   const e=document.getElementById('me').value.trim();
@@ -519,45 +650,47 @@ async function saveAll(){
   const concluido=document.getElementById('exec-concluido').checked;
   const ops=[];
 
-  // Salvar ajuste de prazo
-  if(s||e){
+  const t=TASKS.find(x=>x.id===editId);
+  if(t&&t.base&&(s||e)){
     const payload={task_id:editId,start_date:s||e,end_date:e||s,reason:r,updated_at:new Date().toISOString()};
     ops.push(sb.from('pmo_adjustments').upsert(payload,{onConflict:'task_id'}));
     tAdjs[editId]=payload;
   }
-
-  // Salvar execução real
   if(execS){
-    const execPayload={
-      task_id:editId,
-      inicio_real:execS,
-      fim_real:execE||null,
-      em_execucao:!concluido||!execE,
-      updated_at:new Date().toISOString()
-    };
+    const execPayload={task_id:editId,inicio_real:execS,fim_real:execE||null,em_execucao:!concluido||!execE,updated_at:new Date().toISOString()};
     ops.push(sb.from('pmo_execucao').upsert(execPayload,{onConflict:'task_id'}));
     tExec[editId]=execPayload;
-
-    // Se concluído via execução real, atualizar status
-    if(concluido&&execE){
-      ops.push(sb.from('pmo_tasks').update({status:'done',updated_at:new Date().toISOString()}).eq('id',editId));
-      tStatus[editId]='done';
-    } else if(tStatus[editId]!=='done'){
-      ops.push(sb.from('pmo_tasks').update({status:'active',updated_at:new Date().toISOString()}).eq('id',editId));
-      tStatus[editId]='active';
+    const novoSt=(concluido&&execE)?'done':'active';
+    if(t&&t.base){
+      ops.push(sb.from('pmo_tasks').update({status:novoSt,updated_at:new Date().toISOString()}).eq('id',editId));
+    }else{
+      ops.push(sb.from('pmo_atividades').update({status:novoSt,updated_at:new Date().toISOString()}).eq('id',t.dbId));
     }
+    tStatus[editId]=novoSt;
   }
-
   await Promise.all(ops);
-  closeModal();
-  renderAll();
+  closeModals();renderAll();
   toast('Salvo! Visível para todos.');
 }
 
-// ── DEMAIS ──
+async function deleteActivity(taskId,dbId){
+  if(!confirm('Excluir esta atividade permanentemente?'))return;
+  const{error}=await sb.from('pmo_atividades').delete().eq('id',dbId);
+  if(error){toast('Erro ao excluir.');return;}
+  dbActivities=dbActivities.filter(t=>t.dbId!==dbId);
+  TASKS=[...BASE_TASKS,...dbActivities];
+  delete tStatus[taskId];delete tExec[taskId];delete tAdjs[taskId];
+  renderAll();toast('Atividade excluída.');
+}
+
 async function toggleDone(id){
   const novo=tStatus[id]==='done'?'active':'done';
-  await sb.from('pmo_tasks').update({status:novo,updated_at:new Date().toISOString()}).eq('id',id);
+  const t=TASKS.find(x=>x.id===id);
+  if(t&&t.base){
+    await sb.from('pmo_tasks').update({status:novo,updated_at:new Date().toISOString()}).eq('id',id);
+  }else{
+    await sb.from('pmo_atividades').update({status:novo,updated_at:new Date().toISOString()}).eq('id',t.dbId);
+  }
   tStatus[id]=novo;renderAll();
   toast(novo==='done'?'Marcado como concluído!':'Tarefa reaberta.');
 }
@@ -567,6 +700,7 @@ function hl(id){
   if(hlId){const el=document.getElementById('cd-'+id);if(el)el.scrollIntoView({behavior:'smooth',block:'center'});}
 }
 
+// ── OBS ──
 async function addObs(k){
   const inp=document.getElementById('oi-'+k);
   const v=inp.value.trim();if(!v)return;
@@ -590,18 +724,24 @@ async function deleteObs(id,lane){
 }
 
 function exportCSV(){
-  const rows=['\uFEFFResponsável,Entrega,Início Plan.,Fim Plan.,Status,Início Real,Fim Real,Em Execução,Justificativa'];
+  const rows=['\uFEFFResponsável,Entrega,Início Plan.,Fim Plan.,Status,Início Real,Fim Real,Tipo'];
   TASKS.forEach(t=>{
-    const{s,e,adj}=getDates(t);const a=tAdjs[t.id];const ex=tExec[t.id];
-    rows.push(`"${NAMES[t.lane]}","${t.title}","${disp(s)}","${disp(e)}","${tStatus[t.id]||'pending'}","${ex?dispFull(ex.inicio_real):''}","${ex&&ex.fim_real?dispFull(ex.fim_real):''}","${ex&&ex.em_execucao?'Sim':'Não'}","${a&&a.reason?a.reason:''}"`);
+    const{s,e}=getDates(t);const ex=tExec[t.id];
+    rows.push(`"${NAMES[t.lane]}","${t.title}","${disp(s)}","${disp(e)}","${tStatus[t.id]||'pending'}","${ex?dispISO(ex.inicio_real):''}","${ex&&ex.fim_real?dispISO(ex.fim_real):''}","${t.base?'Original':'Nova'}"`);
   });
   const blob=new Blob([rows.join('\n')],{type:'text/csv;charset=utf-8'});
   const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='pmo-planner.csv';a.click();
-  toast('CSV exportado com dados de execução real!');
+  toast('CSV exportado!');
 }
 
 function copyLink(){
   navigator.clipboard.writeText(window.location.href).then(()=>toast('Link copiado!')).catch(()=>prompt('Link:',window.location.href));
+}
+
+function closeModals(){
+  document.getElementById('modal-task').classList.remove('open');
+  document.getElementById('modal-new').classList.remove('open');
+  editId=null;
 }
 
 function toast(msg){
@@ -609,7 +749,24 @@ function toast(msg){
   el.classList.remove('hide');clearTimeout(ttimer);ttimer=setTimeout(()=>el.classList.add('hide'),3500);
 }
 
-document.getElementById('modal').addEventListener('click',e=>{if(e.target===document.getElementById('modal'))closeModal()});
+// Color picker
+document.getElementById('color-picker').addEventListener('click',e=>{
+  const opt=e.target.closest('.cp-opt');
+  if(!opt)return;
+  selectedColor=opt.dataset.color;
+  document.querySelectorAll('.cp-opt').forEach(el=>el.classList.remove('selected'));
+  opt.classList.add('selected');
+});
+
+// Fechar modais ao clicar fora
+['modal-task','modal-new'].forEach(id=>{
+  document.getElementById(id).addEventListener('click',e=>{
+    if(e.target===document.getElementById(id))closeModals();
+  });
+});
+
+// Tecla ESC fecha modal
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModals()});
 
 const M=['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
 const nd=new Date();
